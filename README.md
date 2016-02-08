@@ -32,9 +32,7 @@ I would like to filter links by tag
 |--------|----------|
 | User   | Add link |
 |        | Add tag  |
-|--------|----------|
 | List of links   |  View |
 |                 |  Add link |
 |                 |  Filter by tag |
-|-----------------|-----------|
 | Link | Be tagged |
