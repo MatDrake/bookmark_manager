@@ -1,4 +1,3 @@
-require 'rubygems'
-require File.join(File.dirname(__FILE__), 'bookmark_app.rb')
+require './app/bookmark_manager.rb'
 
 run Bookmark
