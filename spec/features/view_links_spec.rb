@@ -2,8 +2,14 @@ require_relative '../spec_helper'
 
 feature 'Links' do
   Link.all.destroy
-  Link.create(id: 1, name: 'Google', link: 'www.google.co.uk')
-
+  scenario 'add links'do
+    visit('/links/new')
+    fill_in('name', with: 'Google')
+    fill_in('link', with: 'www.google.co.uk')
+    click_button('save')
+    expect(page).to have_content('Link Saved!')
+  end
+  
   scenario 'can be viewed' do
     visit('/links')
     expect(page).to have_content 'Google'
