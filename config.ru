@@ -1,3 +1,3 @@
-require './app/bookmark_manager.rb'
+require './app/bookmark_app.rb'
 
 run Bookmark
