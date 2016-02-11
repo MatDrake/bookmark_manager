@@ -8,6 +8,7 @@ require 'rspec'
 require './app/models/link.rb'
 require 'database_cleaner'
 require 'web_helper'
+require 'tilt/erb'
 
 Capybara.app = Bookmark
 
