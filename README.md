@@ -38,4 +38,3 @@ I would like to filter links by tag
 |                 |  Add link |
 |                 |  Filter by tag |
 | Link | Be tagged |
->>>>>>> 333ee875782c48144d55179d722345b30fee90dc
