@@ -1,7 +1,7 @@
 ENV["RACK_ENV"] ||= "development"
 
 require 'sinatra/base'
-require './app/model/links.rb'
+require_relative 'data_mapper_setup'
 require 'tilt/erb'
 
 class Bookmark < Sinatra::Base
@@ -15,12 +15,11 @@ class Bookmark < Sinatra::Base
   end
 
   post '/links'do
-    Link.create(name: params[:name], link: params[:link])
-    redirect '/savedlink'
-  end
-
-  get '/savedlink'do
-    erb :savedlink
+    link = Link.new(name: params[:name], link: params[:link])
+    tag = Tag.create(name: params[:tags])
+    link.tags << tag
+    link.save
+    redirect '/links'
   end
 
   # start the server if ruby file executed directly
